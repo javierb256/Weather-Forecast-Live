@@ -1,0 +1,33 @@
+.header{
+    font-family: 'Palatina', 'serif';
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #0300B8;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: bold;
+    flex-grow: 3;
+    text-align: center;
+    padding-right: 170px;
+}
+
+
+.logo{
+    max-width: 180px;
+    height: 90px;
+    padding-top: 17px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em;
+        padding-right: 25px;
+    }
+}
