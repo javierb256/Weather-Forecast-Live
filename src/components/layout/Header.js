@@ -1,7 +1,4 @@
 import classes from './Header.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
-import {faCloud } from '@fortawesome/free-solid-svg-icons';
 import image from '../../weather logo.png'
 
 function Header() {

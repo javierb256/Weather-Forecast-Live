@@ -12,7 +12,8 @@ function Weather() {
   const [forecast, setForecast] = useState(null);
   const [current, setCurrent] = useState();
 
-  const [zipCode, setZipCode] = useState(91324);
+  //default zip code
+  const zipCode = 91324;
 
   // const [error, setError] = useState(null);
   const [days, setDays] = useState([]);
