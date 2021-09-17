@@ -19,7 +19,7 @@ function Forecast(props) {
             <div className={classes.weatherDescription}>
               {day.day.condition.text}
             </div>
-            <div className={classes.presipitation}>
+            <div className={classes.precipitation}>
               <div>
                 <FontAwesomeIcon icon={faTint} />
               </div>

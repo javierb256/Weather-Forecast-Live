@@ -34,14 +34,14 @@
     font-size: 2rem;
 }
 
-.presipitation{
+.precipitation{
     color: #0077b6;
     text-align: center;
     margin-top: auto;
     font-size: 1.5rem;
 }
 
-.presipitation > div {
+.precipitation > div {
     display: inline;
 }
 

@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import classes from "./Weather.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 import Location from "./Location/Location";
 import Forecast from "./Forecast/Forecast";
 import Current from "./Current/Current";
@@ -11,9 +14,10 @@ function Weather() {
   const [loading, setLoading] = useState(true);
   const [forecast, setForecast] = useState(null);
   const [current, setCurrent] = useState();
+  const [value, setValue] = useState("");
 
   //default zip code
-  const zipCode = 91324;
+  const [zipCode, setzipCode] = useState(91324);
 
   // const [error, setError] = useState(null);
   const [days, setDays] = useState([]);
@@ -36,15 +40,24 @@ function Weather() {
         setLocationName(data.location);
         setForecast(data.forecast);
         convertDates(data);
-        setCurrent(data.current)
-        console.log(data)
+        setCurrent(data.current);
+        // console.log(data)
       })
       .finally(() => setLoading(false))
       .catch((error) => {
         console.error("Error fetching data: ", error);
         // setError(error);
       });
-  }, []);
+  }, [zipCode]);
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setzipCode(value);
+  };
 
   function convertDates(data) {
     const temp = [];
@@ -64,11 +77,25 @@ function Weather() {
         <h1 className={classes.loading}>Getting Weather Data</h1>
       ) : (
         <>
+          <form onSubmit={handleSubmit}>
+            <input
+              className={classes.search}
+              type="text"
+              value={value}
+              onChange={handleChange}
+              placeholder="Enter Zip Code"
+            />
+              <button type="submit" value="submit">
+                <FontAwesomeIcon icon={faSearch} />
+              </button>
+            {/* <input type="submit" value="Submit" /> */}
+          </form>
+
           <Location location={locationName} />
-          <Current current={current}/>
+          <Current current={current} />
           <h2 className={classes.title}>5 day forecast</h2>
           <Main>
-          <Forecast forecast={forecast} days={days} current={current} />
+            <Forecast forecast={forecast} days={days} current={current} />
           </Main>
         </>
       )}
