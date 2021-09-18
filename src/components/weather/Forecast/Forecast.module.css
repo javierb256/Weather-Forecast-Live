@@ -20,6 +20,7 @@
     text-align: center;
     margin-top: 0px;
     padding: 5px;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .weatherIcon{
@@ -57,7 +58,7 @@
 }
 
 .lowReading {
-    background-color: #e9ecef;
+    /* background-color: #e9ecef; */
     color: #0077b6;
     text-align: center;
     margin-top: 0px;

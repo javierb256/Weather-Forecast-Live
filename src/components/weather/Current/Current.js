@@ -1,7 +1,7 @@
 import classes from "./Current.module.css";
 
 function Current(props) {
-  console.log(props);
+//   console.log(props);
   return (
     <div className={classes.container}>
       <h2 className={classes.title}>Current Weather</h2>
