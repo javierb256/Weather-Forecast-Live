@@ -88,7 +88,6 @@ function Weather() {
               <button type="submit" value="submit">
                 <FontAwesomeIcon icon={faSearch} />
               </button>
-            {/* <input type="submit" value="Submit" /> */}
           </form>
 
           <Location location={locationName} />

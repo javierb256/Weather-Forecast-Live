@@ -9,7 +9,7 @@ function Forecast(props) {
 //   console.log(props.forecast.forecastday[0].day.daily_chance_of_rain)
   return props.forecast.forecastday.map((day, index) => {
     return (
-        <Card >
+        <Card key={index}>
           <div className={classes.container}>
             <h1 className={classes.day}>{props.days[index]}</h1>
             <div className={classes.weatherIcon}>
