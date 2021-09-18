@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 200px;
     height: 400px;
-    font-family: 'Palatina', 'serif';
+    font-family: 'PT Sans Caption', sans-serif;
     /* justify-content: space-between; */
 }
 
@@ -31,7 +31,8 @@
 .weatherDescription{
     color: #0077b6;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-family: 'PT Sans Caption', sans-serif;
 }
 
 .precipitation{

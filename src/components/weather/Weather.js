@@ -41,7 +41,6 @@ function Weather() {
         setForecast(data.forecast);
         convertDates(data);
         setCurrent(data.current);
-        // console.log(data)
       })
       .finally(() => setLoading(false))
       .catch((error) => {

@@ -14,6 +14,7 @@ input{
     margin-left: 5px;
     border-radius: 15px;
     border: none;
+    font-family: 'PT Sans Caption', sans-serif;
 }
 
 button{
@@ -36,5 +37,5 @@ input:focus{
 
 .title {
     text-align: center;
-    font-family: 'Calibri';
+    font-family: 'PT Sans Caption', sans-serif;
 }

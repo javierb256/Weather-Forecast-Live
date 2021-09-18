@@ -1,3 +1,9 @@
+p{
+    font-weight: 500;
+    margin-top: -20px;
+    font-size: 1rem;
+}
+
 .container {
     position: relative;
     background-color: #e9ecef;
@@ -6,6 +12,7 @@
     margin-bottom: 20px;
     max-width: 700px;
     margin: 30px auto;
+    font-family: 'PT Sans Caption', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -25,7 +32,7 @@
     padding: 10px;
     background-color: #0077b6;
     text-align: center;
-    font-family: 'Palatina';
+    font-family: 'PT Sans Caption', sans-serif;
 }
 
 .info{
@@ -33,7 +40,6 @@
     position: relative;
     justify-content: center;
     flex-direction: row;
-    height: 200px;
 }
 
 .info > div:nth-child(1) {
@@ -59,6 +65,19 @@
 .info > div:nth-of-type(2) > h2 {
     /* width: 100%; */
     margin-top: 30px;
+}
+
+.subInfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* gap: 40px; */
+    column-gap: 50px;
+}
+
+.subInfo > div > p{
+    text-align: center;
 }
 
 @media (max-width: 480px) {
