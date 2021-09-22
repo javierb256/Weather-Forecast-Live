@@ -1,36 +1,35 @@
 import classes from "./Current.module.css";
 
 function Current(props) {
-//   console.log(props);
   return (
     <div className={classes.container}>
       <h2 className={classes.title}>Current Weather</h2>
       <div className={classes.info}>
         <div>
-          <img src={props.current.condition.icon} alt="current weather icon" />
-          <div>{props.current.temp_f}°</div>
+          <img src={props.icon} alt="current weather icon" />
+          <div>{props.currentWeather[0]}°</div>
         </div>
         <div>
-          <h2>{props.current.condition.text}</h2>
-          <p>Feels Like {props.current.feelslike_f}°</p>
+          <h2>{props.text}</h2>
+          <p>Feels Like {props.currentWeather[1]}°</p>
         </div>
       </div>
       <div className={classes.subInfo}>
         <div>
           <h3>Humidity</h3>
-          <p>{props.current.humidity}%</p>
+          <p>{props.humidity}%</p>
         </div>
         <div>
           <h3>Pressure</h3>
-          <p>{props.current.pressure_in}in</p>
+          <p>{props.pressure}</p>
         </div>
         <div>
           <h3>Visibility</h3>
-          <p>{props.current.vis_miles} mi</p>
+          <p>{props.visibility}</p>
         </div>
         <div>
           <h3>Wind</h3>
-          <p>{props.current.wind_mph} mph</p>
+          <p>{props.wind}</p>
         </div>
       </div>
     </div>

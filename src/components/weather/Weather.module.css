@@ -6,10 +6,9 @@ form{
     padding: 2px;
     border-radius: 15px;
     max-width:280px;
-    margin: 5px auto;
 }
 
-input{
+form > input{
     flex-grow: 2;
     margin-left: 5px;
     border-radius: 15px;
@@ -17,12 +16,12 @@ input{
     font-family: 'PT Sans Caption', sans-serif;
 }
 
-button{
+form > button{
     border: none;
     background: transparent;
 }
 
-button:hover{
+form > button:hover{
     cursor: pointer;
 }
 
@@ -38,4 +37,82 @@ input:focus{
 .title {
     text-align: center;
     font-family: 'PT Sans Caption', sans-serif;
+}
+
+.unitChanger{
+    text-align: center;
+    border: none;
+}
+
+.unitChanger > button {
+    border: none;
+    padding: 5px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 60px;
+    height: 26px;
+    background: #0077b6;
+    -webkit-appearance: none;
+    border-radius: 20px;
+    outline: none;
+    transition: .4s;
+    cursor: pointer;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+input:checked[type="checkbox"]{
+    background-color: #0077b6;
+}
+
+input[type="checkbox"]::before{
+    z-index: 2;
+    position: absolute;
+    content: "";
+    left: 6px;
+    top: 3px;
+    width: 20px;
+    height:20px;
+    background-color: #ffff;
+    border-radius: 50%;
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+input:checked[type="checkbox"]:before{
+    left: 33px
+}
+
+.toggle{
+    position: relative;
+    display: inline;
+}
+
+label{
+    position: absolute;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.onbtn{
+    bottom: 10px;
+    left: 15px;
+}
+
+.offbtn{
+    bottom: 10px;
+    right: 14px;
+    color: white;
+}
+
+.searchFilter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto;
 }

@@ -47,7 +47,6 @@ p{
 .info > div:nth-child(1) {
     width: 160px;
     text-align: center;
-    /* background-color: red; */
 }
 
 .info > div > img {
@@ -61,11 +60,9 @@ p{
     font-size: 2rem;
     font-weight: 700;
     color: #0077b6;
-    /* background-color: red; */
 }
 
 .info > div:nth-of-type(2) > h2 {
-    /* width: 100%; */
     margin-top: 30px;
 }
 
@@ -74,7 +71,6 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* gap: 40px; */
     column-gap: 50px;
 }
 
