@@ -19,7 +19,7 @@ function Weather() {
   const [text, setText] = useState();
   const [forecastFahrenheit, setForecastFahrenheit] = useState();
   const [forecastCelsius, setForecastCelsius] = useState();
-  const [isFarenheight, setFarenheight] = useState(true);
+  const [isFahrenheit, setFahrenheit] = useState(true);
   const [weatherFahrenheit, setWeatherFahrenheit] = useState();
   const [weatherCelsius, setWeatherCelsius] = useState();
 
@@ -33,6 +33,7 @@ function Weather() {
   useEffect(() => {
     //sets the loading state as true to indicate loading data
     setLoading(true);
+    setFahrenheit(true);
     fetch(
       `https://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}${zipCode}`
     )
@@ -130,10 +131,10 @@ function Weather() {
 
   //changes the fahrenheit state when the unit button is pressed
   const toggleWeather = () => {
-    if (isFarenheight) {
-      setFarenheight(false);
+    if (isFahrenheit) {
+      setFahrenheit(false);
     } else {
-      setFarenheight(true);
+      setFahrenheit(true);
     }
   };
 
@@ -184,7 +185,7 @@ function Weather() {
           </div>
 
           <Location location={locationName} />
-          {isFarenheight ? (
+          {isFahrenheit ? (
             <Current
               currentWeather={weatherFahrenheit}
               icon={icon}
@@ -207,7 +208,7 @@ function Weather() {
           )}
           <h2 className={classes.title}>5 day forecast</h2>
           <Main>
-            {isFarenheight ? (
+            {isFahrenheit ? (
               <Forecast forecast={forecastFahrenheit} days={days} />
             ) : (
               <Forecast forecast={forecastCelsius} days={days} />
